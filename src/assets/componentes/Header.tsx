@@ -1,10 +1,6 @@
-const user = {
-  name: 'Mateus',
-  lastName: 'Lucas'
-}
-
+import User from './User';
 
 function Header() {
-  return <h1>{`Olá, ${user.name } ${user.lastName}`}</h1>  
+  return <h1>Olá, {' '} <User />  </h1>  
 }
 export default Header;
