@@ -1,7 +1,8 @@
-import Header from "./assets/componentes/Header";
-import Footer from "./assets/componentes/Footer";
-import Book from "./assets/componentes/Book";
-import Title from "./assets/componentes/Title";
+import Header from "./assets/componentes/header";
+import Footer from "./assets/componentes/footer";
+import Book from "./assets/componentes/book";
+import Title from "./assets/componentes/title";
+import "./App.css";
 
 const booksList = [
   {
@@ -44,21 +45,23 @@ const booksList = [
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Header />
-      <Title>
-        <s>Livros emprestados </s>Meus Livros:
-      </Title>
-      <p>
-        <s>Livros emprestados </s>Meus Livros:
-      </p>
-      <ul>
-        {booksList.map((book) => (
-          <Book book={book} key={book.title} />
-        ))}
-      </ul>
+      <div className="container">
+        <Title>
+          <s>Livros emprestados </s>Meus Livros:
+        </Title>
+        <p>
+          <s>Livros emprestados </s>Meus Livros:
+        </p>
+        <ul className="books-list">
+          {booksList.map((book) => (
+            <Book book={book} key={book.title} />
+          ))}
+        </ul>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
