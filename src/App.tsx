@@ -4,6 +4,8 @@ import Book from "./assets/componentes/book";
 import Title from "./assets/componentes/title";
 import { bestMovie, booksList } from "./data";
 
+import interstellarSrc from "./assets/interstellarSrc.jpg";
+
 import "./App.css";
 
 function App() {
@@ -23,6 +25,10 @@ function App() {
           ))}
         </ul>
         <Title>{bestMovie}</Title>
+        <div className="images-container">
+          <img src={interstellarSrc} alt="Poster 1 interstellar" />
+          <img src="/interstellarPublic.jpg" alt="Poster 2 interstellar" />
+        </div>
       </div>
       <Footer />
     </div>
