@@ -14,6 +14,14 @@ function App() {
     alert(messageText);
   }
 
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    console.log(event.target.value);
+  }
+  // vai receber um array de numeros e vai retornar ou outro array com os numeros multiplicados por 2
+  function dubleNumber(numberList: Array<number>) {
+    return numberList.map((number) => number * 2);
+  }
+
   return (
     <div className="app">
       <Header />
@@ -41,6 +49,14 @@ function App() {
         <Button onClick={() => handleClick("Não, Ele é muito demorado!")}>
           <strong>Posso assistir sem medo?</strong>
         </Button>
+
+        <input
+          placeholder="Digite aqui"
+          type="text"
+          onChange={(event) => {
+            handleChange(event);
+          }}
+        />
         {/* Dá pra fazer o botão das duas formas: */}
         {/* <button onClick={handleClick}>Esse filme é bom?</button> */}
         {/* Da segunda forma não precisa da função lá em cima, porém dependendo da função tem que ver qual compensa! Acho que a de baixo é melhor para quando é um botão bem simples, ai fica um codigo mais limpo. */}
